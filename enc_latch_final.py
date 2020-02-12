@@ -27,7 +27,7 @@ while(1):
     if(x=='2'):
         print('Latch in')
         g.output(36,g.LOW)
-    elif(x=='3'):               # Max. down speed motor loop
+    elif(x=='3'):               # Max. down speed motor
         print('Motor down')
         g.output(p_dir, g.HIGH)
         pwm.ChangeDutyCycle(0)    # max speed = HIGH - 0
