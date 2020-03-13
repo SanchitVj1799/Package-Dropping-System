@@ -33,25 +33,25 @@ while(1):
         pwm.ChangeDutyCycle(0)    # max speed = HIGH - 0
         print('motor down speed')
     
-    elif(x=='4'):             #Max. up speed motor loop
+    elif(x=='4'):             #Max. up speed motor
         print('Motor up')
         g.output(p_dir, g.LOW)
         pwm.ChangeDutyCycle(100)   #  max speed = 100 - LOW
         print('motor up speed')
     
-    elif(x=='5'):           # Stopping motor loop
+    elif(x=='5'):           # Stopping motor
         g.output(p_dir, g.LOW)
         pwm.ChangeDutyCycle(0)
         print('Stopping Motor')
         print('Motor stop')
     
-    elif(x=='6'):               # Loop controlling down speed
+    elif(x=='6'):               # controlling down speed
         speed=int(input())
         g.output(p_dir, g.HIGH)
         pwm.ChangeDutyCycle(100 - speed)
         print('motor down speed')
     
-    elif(x=='7'):             # Loop controlling up speed
+    elif(x=='7'):             # controlling up speed
         speed=int(input())
         g.output(p_dir, g.LOW)
         pwm.ChangeDutyCycle(speed)
